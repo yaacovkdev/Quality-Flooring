@@ -1,0 +1,14 @@
+@use "/src/styles/variables" as *;
+
+.footer {
+  text-align: center;
+  
+  background-color: $flooring-silver;
+  position:static;
+  bottom: 0;
+  p {
+    margin:0;
+    line-height: 3rem;
+    color: $flooring-white;
+  }
+}

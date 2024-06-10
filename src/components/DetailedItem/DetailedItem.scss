@@ -1,0 +1,35 @@
+@use "/src/styles/variables" as *;
+.detailed-item {
+  background-color: $flooring-white;
+  padding-bottom: 3rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    width: fit-content;
+    h1 {
+      width: fit-content;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    img {
+      margin: 0.7rem 0.7rem 0 0;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__body {
+    font-size: 1.5rem;
+  }
+}
