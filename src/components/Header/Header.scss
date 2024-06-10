@@ -8,6 +8,7 @@ header {
   background-color: white;
   z-index: 3;
   width: 100%;
+  height: $flooring-header-height;
   
   .header-content {
     flex-direction: row;
@@ -94,7 +95,7 @@ header {
       position: fixed;
       width: 100vw;
       height: calc(100vh - 82px);
-      top: 82px;
+      top: $flooring-header-height;
       right: 100%;
       margin: 0;
       font-size: 1.5rem;

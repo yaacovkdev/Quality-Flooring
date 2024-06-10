@@ -1,8 +1,16 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
-.showcase-content {
+
+.contacts-content {
   background-color: $flooring-white;
-  flex-direction: column;
+
+  > * {
+    width: fit-content;
+  }
+
+  &__items {
+    padding: 1rem;
+  }
 
   @include desktop {
     border-radius: 1rem;

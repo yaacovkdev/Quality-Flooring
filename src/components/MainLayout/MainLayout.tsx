@@ -1,5 +1,6 @@
 import "./MainLayout.scss";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 export default function MainLayout({
   children,
@@ -7,9 +8,10 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="main-layout-box">
       <Header />
-      <div className="content">{children}</div>
-    </>
+        <div className="content">{children}</div>
+      <Footer />
+    </div>
   );
 }
