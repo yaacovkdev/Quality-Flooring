@@ -1,0 +1,53 @@
+@use "/src/styles/mixins" as *;
+@use "/src/styles/variables" as *;
+
+.showcase-item {
+  margin: 2rem;
+  border: 3px solid $flooring-orange;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $pure-white;
+
+    .click-info-text {
+      color: $flooring-green;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+      margin: 1rem;
+      font-size: 2.5em;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__part {
+    padding: 1rem;
+
+    &--img img {
+      border-radius: 0.25rem;
+    }
+
+    &--text {
+      font-size: 1.5em;
+
+      .click-info-text {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+  }
+}

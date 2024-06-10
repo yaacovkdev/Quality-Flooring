@@ -1,0 +1,7 @@
+@use "/src/styles/variables" as *;
+
+.showcase-content {
+  background-color: $flooring-white;
+  border-radius: 0.5rem;
+  flex-direction: column;
+}

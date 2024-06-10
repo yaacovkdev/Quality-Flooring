@@ -1,0 +1,39 @@
+@use "./breakpoints" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-break) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-break) {
+    @content;
+  }
+}
+
+@mixin main-display {
+  .display-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+
+    @include tablet {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+
+    @include desktop {
+      width: $desktop-break;
+      margin: auto;
+    }
+  }
+
+  .default-shadow {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  }
+}
