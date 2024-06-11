@@ -75,16 +75,16 @@ header {
       }
 
       to {
-        right: 0;
+        right: calc(100vw - $navigation-width);
       }
     }
 
     .navanim-forward {
-      animation: navigationPanel 0.5s ease-in forwards;
+      animation: navigationPanel 0.5s ease forwards;
     }
 
     .navanim-backward {
-      animation: navigationPanel 0.5s ease-in reverse forwards;
+      animation: navigationPanel 0.5s ease reverse forwards;
     }
 
     .nav-move-right {
@@ -93,8 +93,8 @@ header {
 
     .navigation {
       position: fixed;
-      width: 100vw;
-      height: calc(100vh - 82px);
+      width: $navigation-width;
+      height: calc(100vh - $flooring-header-height);
       top: $flooring-header-height;
       right: 100%;
       margin: 0;

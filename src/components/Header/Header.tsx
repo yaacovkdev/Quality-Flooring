@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import Link from "next/link";
 import { useRef } from "react";
+import { NAVIGATION_WIDTH} from "@/util/Constants";
 
 export default function Header() {
 
@@ -25,7 +26,7 @@ export default function Header() {
       if (!navmobilerender) {
     
         navigationPageRef.current.classList.add('navanim-forward');
-        navigationPageRef.current.style.right = `0`;
+        navigationPageRef.current.style.right = `calc(100% - ${NAVIGATION_WIDTH})`;
       } else {
         navigationPageRef.current.classList.add('navanim-backward');
         navigationPageRef.current.style.right = `100%`;
