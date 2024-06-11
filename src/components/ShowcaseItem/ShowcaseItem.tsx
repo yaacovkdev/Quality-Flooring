@@ -8,7 +8,7 @@ function ShowcaseItem(props: {
   description: string;
 }) {
   return (
-    <div className="showcase-item">
+    <div className="showcase-item default-shadow">
       <Link className="showcase-item__interractive" href={`/show/${props.title}`}>
         <div className="showcase-item__link">
           <h2>{props.title}</h2>
