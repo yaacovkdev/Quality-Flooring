@@ -36,8 +36,8 @@ export default function DetailedItem(props: { projectName: string }) {
               <Image
                 className="default-shadow"
                 key={projimg.id}
-                width={400}
-                height={700}
+                width={500}
+                height={875}
                 src={`${process.env.NEXT_PUBLIC_API_URL}/images/id/${projimg.id}`}
                 alt={projimg.name}
               />
