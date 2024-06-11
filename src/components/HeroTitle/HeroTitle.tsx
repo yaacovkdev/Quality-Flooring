@@ -4,7 +4,7 @@ import "./HeroTitle.scss";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
-import default_img from "../../assets/images/cleanroom.jpg";
+import default_img from "../../../public/assets/cleanroom.jpg";
 
 export default function HeroTitle() {
   const [heroImages, setHeroImages] = useState({

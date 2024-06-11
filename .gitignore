@@ -6,8 +6,6 @@
 .pnp.js
 .yarn/install-state.gz
 
-/imgdata
-
 # testing
 /coverage
 
@@ -21,10 +19,6 @@
 # misc
 .DS_Store
 *.pem
-
-#assets
-*.jpg
-*.JPG
 
 # debug
 npm-debug.log*
