@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 function ShowcaseItem(props: {
+  id: number,
   title: string;
   imageId: number;
   description: string;
 }) {
   return (
     <div className="showcase-item default-shadow">
-      <Link className="showcase-item__interractive" href={`/show/${props.title}`}>
+      <Link className="showcase-item__interractive" href={`/show/${props.id}`}>
         <div className="showcase-item__link">
           <h2>{props.title}</h2>
           <div className="showcase-item__content">

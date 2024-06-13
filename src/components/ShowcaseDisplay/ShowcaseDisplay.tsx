@@ -3,12 +3,13 @@
 import React, { useEffect, useState } from "react";
 import "./ShowcaseDisplay.scss";
 import ShowcaseItem from "../ShowcaseItem/ShowcaseItem";
-import { fetchAllPreviewProjectData } from "@/util/ProjectData";
+import { fetchAllPreviewProjectsData } from "@/util/ProjectData";
 
 export default function ShowcaseDisplay() {
   const [projects, setProjectNames] = useState<
     {
-      project_name: string;
+      id: number;
+      name: string;
       images: {
         id: number;
         name: string;
@@ -22,7 +23,7 @@ export default function ShowcaseDisplay() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetchAllPreviewProjectData();
+        const response = await fetchAllPreviewProjectsData();
 
         setProjectNames(response.data);
       } catch (err) {
@@ -33,7 +34,6 @@ export default function ShowcaseDisplay() {
     getData();
   }, []);
 
-  let showcase_id = 0;
   console.log(projects);
   return (
     <div className="showcase-main">
@@ -41,8 +41,9 @@ export default function ShowcaseDisplay() {
         {projects.length > 0 &&
           projects.map((project) => (
             <ShowcaseItem
-              key={++showcase_id}
-              title={project.project_name}
+              key={project.id}
+              id={project.id}
+              title={project.name}
               imageId={project.images[0].id}
               description={project.description}
             />

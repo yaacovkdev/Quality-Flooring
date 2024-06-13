@@ -10,9 +10,8 @@ export default function HeroTitle() {
   const [heroImages, setHeroImages] = useState({
     id: -1,
     text: "",
+    attempted: false,
   });
-
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -30,12 +29,11 @@ export default function HeroTitle() {
         setHeroImages({
           id: responseId.data[randomIndex].id,
           text: responseHeroText.data.body,
+          attempted: true,
         });
-
-        setIsLoading(false);
       } catch (err) {
         console.error(err);
-        setIsLoading(false);
+        setHeroImages({ ...heroImages, attempted: true });
       }
     };
     fetchImages();
@@ -45,7 +43,7 @@ export default function HeroTitle() {
     ? heroImages.text
     : 'Best <span class="normal-font">feeling for your feet!</span>';
   return (
-    isLoading || (
+    !heroImages.attempted || (
       <div className="hero-title">
         <div className="hero-content default-shadow">
           {<h1 dangerouslySetInnerHTML={{ __html: caption }}></h1>}
