@@ -28,10 +28,11 @@
       margin: 0.7rem 0.7rem 0 0;
       border-radius: 0.5rem;
       width: 280px;
-      height: auto;
+      height: 374px;
 
       @include tablet {
         width: 400px;
+        height: 534px;
       }
     }
   }

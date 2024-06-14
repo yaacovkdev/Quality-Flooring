@@ -51,6 +51,7 @@ export default function HeroTitle() {
           <Image
             width={1280}
             height={620}
+            
             src={
               heroImages.id === -1
                 ? default_img

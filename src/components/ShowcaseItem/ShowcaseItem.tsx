@@ -17,7 +17,7 @@ function ShowcaseItem(props: {
             <div className="showcase-item__part showcase-item__part--img">
               <Image
                 width={100}
-                height={220}
+                height={134}
                 src={`${process.env.NEXT_PUBLIC_API_URL}/images/id/${props.imageId}`}
                 alt={props.title}
                 priority={true}
