@@ -1,3 +1,4 @@
+import FlooringBarDesign from "@/components/FlooringBarDesign/FlooringBarDesign";
 import HeroTitle from "../components/HeroTitle/HeroTitle";
 import MainLayout from "@/components/MainLayout/MainLayout";
 import Head from "next/head";
@@ -17,6 +18,7 @@ export default function Home() {
         children={
           <>
             <HeroTitle />
+            <FlooringBarDesign />
           </>
         }
       />

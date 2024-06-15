@@ -1,0 +1,30 @@
+.flooring-design-content {
+
+  .flooring-row {
+    display: flex;
+    & > :nth-child(1) {
+      width: 70%;
+    }
+    & > :nth-child(2) {
+      width: 30%;
+    }
+
+    &--second {
+      & > :nth-child(2) {
+        width: 70%;
+      }
+      & > :nth-child(1) {
+        width: 30%;
+      }
+    }
+
+    &--third {
+      & > :nth-child(2) {
+        width: 45%;
+      }
+      & > :nth-child(1) {
+        width: 55%;
+      }
+    }
+  }
+}
