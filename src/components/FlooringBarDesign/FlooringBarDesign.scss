@@ -1,15 +1,18 @@
 .flooring-design-content {
-
   .flooring-row {
     display: flex;
+    position: relative;
+    
     & > :nth-child(1) {
       width: 70%;
+      transform: translateX(2px);
     }
     & > :nth-child(2) {
       width: 30%;
     }
 
     &--second {
+      transform: translateY(-2px);
       & > :nth-child(2) {
         width: 70%;
       }
@@ -19,6 +22,7 @@
     }
 
     &--third {
+      transform: translateY(-4px);
       & > :nth-child(2) {
         width: 45%;
       }
