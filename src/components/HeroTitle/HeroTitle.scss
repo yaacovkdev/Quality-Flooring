@@ -19,7 +19,10 @@
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 35rem;
+    object-position: center;
+    object-fit: cover;
   }
 
   @include tablet {

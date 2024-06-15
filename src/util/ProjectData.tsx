@@ -1,16 +1,18 @@
 import axios from "axios";
 
 //taken function fro ShowcaseDisplay.tsx
-const fetchAllPreviewProjectData = async (): Promise<
+const fetchAllPreviewProjectsData = async (): Promise<
   {
-    project_name: string;
+    id: number,
+    name: string;
     images: { id: number; name: string }[];
     description: string;
   }[]
 > => {
   try {
     const projectsPreviewData: {
-      project_name: string;
+      id: number,
+      name: string;
       images: { id: number; name: string }[];
       description: string;
     }[] = await axios.get(
@@ -25,21 +27,24 @@ const fetchAllPreviewProjectData = async (): Promise<
 };
 
 const fetchNameFullProjectData = async (
-  name: string
+  id: number
 ): Promise<
 {
+  id: number,
   name: string;
   images: { id: number; name: string }[];
   description: string;
 }[]
 > => {
 try {
+  console.log(id);
   const projectsPreviewData: {
+    id: number;
     name: string;
     images: { id: number; name: string }[];
     description: string;
   }[] = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/projects/${name}`
+    `${process.env.NEXT_PUBLIC_API_URL}/projects/${id}`
   );
 
   return projectsPreviewData;
@@ -49,4 +54,4 @@ try {
 }
 };
 
-export { fetchAllPreviewProjectData, fetchNameFullProjectData};
+export { fetchAllPreviewProjectsData, fetchNameFullProjectData};

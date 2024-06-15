@@ -5,15 +5,15 @@ import MainLayout from '@/components/MainLayout/MainLayout';
 import DetailedItem from '@/components/DetailedItem/DetailedItem';
 
 export default function ShowTitlePage() {
-  const {title} = useParams();
-  let projectName: string = "";
-  if (Array.isArray(title)) {
-    projectName = title[0];
+  const {id} = useParams();
+  let projectId: number;
+  if (Array.isArray(id)) {
+    projectId = Number(id[0]);
   } else {
-    projectName = title;
+    projectId = Number(id);
   }
 
   return (
-    <MainLayout children={<DetailedItem projectName={projectName} />} />
+    <MainLayout children={<DetailedItem projectId={projectId} />} />
   );
 };

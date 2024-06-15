@@ -3,7 +3,6 @@
 
 .showcase-item {
   margin: 2rem;
-  border: 3px solid $flooring-orange;
   border-radius: 0.5rem;
 
   &:hover {
@@ -17,12 +16,13 @@
   &__link {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    padding: 1rem;
 
     h2 {
       margin: 1rem;
-      font-size: 2.5em;
+      font-size: 1.5em;
     }
   }
 
@@ -32,17 +32,20 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    gap:1rem;
   }
 
   &__part {
-    padding: 1rem;
-
-    &--img img {
-      border-radius: 0.25rem;
+    &--img {
+      width: auto;
+      img {
+        border-radius: 0.25rem;
+      }
     }
 
     &--text {
-      font-size: 1.5em;
+      font-size: 1em;
+      width: fit-content;
 
       .click-info-text {
         font-weight: 700;
