@@ -1,0 +1,12 @@
+@use "/src/styles/variables" as *;
+
+.services-bar {
+  padding: 1rem;
+  background-color: $flooring-white;
+  border: 2px solid $flooring-brown;
+  
+  h1, p {
+    margin: 0.5rem 0;
+  }
+  
+}
