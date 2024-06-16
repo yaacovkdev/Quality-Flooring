@@ -8,6 +8,10 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+
+  &--showcase-item {
+    background-color: $flooring-white;
+  }
 }
 
 .content {
